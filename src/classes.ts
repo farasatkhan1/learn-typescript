@@ -21,6 +21,7 @@ class CAdmin {
     private readonly _secret = "secret";
     email: string;
     userId: string;
+    protected _privateVar: string = "private";
 
     constructor(email: string, userId: string) {
         this.email = email;
@@ -33,5 +34,16 @@ class CAdmin {
 
     set setEmail(email: string) {
         this.email = email;
+    }
+
+    private getToken() {
+        return this._secret;
+    }
+}
+
+class SubUser extends CAdmin {
+    isFamily: boolean = true;
+    changeCourseCount(){
+        this._privateVar = "changed";
     }
 }
