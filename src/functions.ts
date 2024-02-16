@@ -7,6 +7,7 @@ function lowerToUpperCase(val: string) {
 }
 
 function signUp(name: string, email: string, password: string, isPaid: boolean = false): boolean {
+    
     return true;
 }
 
